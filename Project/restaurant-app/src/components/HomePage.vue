@@ -1,25 +1,27 @@
 <template>
     <PageHeader />
     <h1>Hello {{ this.name }}, welcome to the home page.</h1>
-    <table border="1px">
-        <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Contact</td>
-            <td>Address</td>
-            <td>Actions</td>
-        </tr>
-        <tr v-for="item in restaurant" :key="item.id">
-            <td>{{ item.id }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.contact }}</td>
-            <td>{{ item.address }}</td>
-            <td>
-                <router-link :to="'/update/' + item.id">Update</router-link>
-                <button v-on:click="deleteRestaurant(item.id)">Delete</button>
-            </td>
-        </tr>
-    </table>
+    <div class="table">
+        <table border="1px">
+            <tr>
+                <td><b>Id</b></td>
+                <td><b>Name</b></td>
+                <td><b>Contact</b></td>
+                <td><b>Address</b></td>
+                <td><b>Actions</b></td>
+            </tr>
+            <tr v-for="item in restaurant" :key="item.id">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.contact }}</td>
+                <td>{{ item.address }}</td>
+                <td>
+                    <router-link :to="'/update/' + item.id">Update</router-link>
+                    <button v-on:click="deleteRestaurant(item.id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 </template>
 
 <script>
@@ -60,8 +62,62 @@ export default {
 </script>
 
 <style>
+.table {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
 td {
-    width: 160px;
-    height: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+button {
+    margin-left: 10px;
+    padding: 6px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+router-link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+router-link:hover {
+    text-decoration: underline;
 }
 </style>
