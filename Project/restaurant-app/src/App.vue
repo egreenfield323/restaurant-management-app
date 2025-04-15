@@ -28,7 +28,8 @@ body {
 }
 
 .register input,
-.login input {
+.login input,
+.add input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -39,7 +40,8 @@ body {
 }
 
 .register button,
-.login button {
+.login button,
+.add button {
   width: 130px;
   height: 40px;
   border: 1px solid rgb(0, 0, 82);
@@ -50,7 +52,8 @@ body {
 }
 
 .register button:hover,
-.login button:hover {
+.login button:hover,
+.add button:hover {
   width: 128px;
   background-color: rgb(0, 0, 21);
   border: 3px solid white;
