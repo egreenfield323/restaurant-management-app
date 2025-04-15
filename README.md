@@ -1,6 +1,6 @@
 # 🍽️ Restaurant Management App
 
-A Vue.js-based restaurant management application that uses a mock REST API via JSON Server.
+A Vue.js-based restaurant management application that uses a mock REST API via JSON Server. Users can enter restaurant information to keep track of their favorite places to eat.
 
 ## 🛠️ Tech Stack
 
