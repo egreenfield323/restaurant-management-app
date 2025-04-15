@@ -9,10 +9,10 @@
   ],
   "restaurants": [
     {
-      "id": "2b49",
-      "name": "test restaurant",
+      "name": "test name",
       "address": "test address",
-      "contact": "0000"
+      "contact": "0000",
+      "id": "2b49"
     }
   ]
 }
