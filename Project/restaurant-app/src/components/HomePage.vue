@@ -1,6 +1,6 @@
 <template>
     <PageHeader />
-    <h1>Hello {{this.name}}, welcome to the home page.</h1>
+    <h1>Hello {{ this.name }}, welcome to the home page.</h1>
 </template>
 
 <script>
