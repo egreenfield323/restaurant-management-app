@@ -11,6 +11,7 @@
 
 <script>
 import PageHeader from './PageHeader.vue';
+import axios from 'axios';
 export default {
     name: 'AddPage',
     components: {
@@ -26,8 +27,15 @@ export default {
         }
     },
     methods: {
-        addRestaurant() {
-            console.log(this.restaurant)
+        async addRestaurant() {
+            const result = await axios.post("http://localhost:3000/restaurants", {
+                name: this.restaurant.name,
+                address: this.restaurant.address,
+                contact: this.restaurant.contact
+            });
+            if (result.status === 201) {
+                this.$router.push({ name: 'HomePage' });
+            }
         }
     },
     mounted() {
