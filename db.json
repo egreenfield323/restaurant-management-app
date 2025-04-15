@@ -1,10 +1,22 @@
 {
   "users": [
     {
-      "name": "Evan",
-      "password": "password",
-      "email": "evan@evangreenfield.dev",
-      "id": "1"
+      "id": "2d92",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "fcc7",
+      "name": "evan",
+      "password": "estspasssword",
+      "email": "evan@test.com"
+    },
+    {
+      "id": "d9ea",
+      "name": "",
+      "password": "",
+      "email": ""
     }
   ]
 }
