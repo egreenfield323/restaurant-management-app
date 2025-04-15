@@ -26,6 +26,18 @@ export default {
             }
         }
     },
+    methods: {
+        async updateRestaurant() {
+            const result = await axios.put("http://localhost:3000/restaurants/" + this.$route.params.id, {
+                name: this.restaurant.name,
+                address: this.restaurant.address,
+                contact: this.restaurant.contact
+            });
+            if (result.status === 200) {
+                this.$router.push({ name: 'HomePage' });
+            }
+        }
+    },
     async mounted() {
         let user = localStorage.getItem('user-info');
         if (!user) {
